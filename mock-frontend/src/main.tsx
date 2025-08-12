@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Routes } from 'react-router';
 
 import App from './App.tsx';
 import About from './pages/About.tsx';
-import './index.css';
+import './index.scss';
 
 const root = document.getElementById('root');
 const queryClient = new QueryClient();
