@@ -34,7 +34,7 @@ jobs:
       - name: Install dependencies
         run: |
           cd mock-frontend
-          npm ci
+          npm install
 
       - name: Build Vite project
         working-directory: mock-frontend
