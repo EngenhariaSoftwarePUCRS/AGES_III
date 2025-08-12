@@ -1,0 +1,2 @@
+echo "echo '✅ Husky is checking your commit...'"
+npm run lint
