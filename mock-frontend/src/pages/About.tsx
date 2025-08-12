@@ -9,9 +9,7 @@ function About() {
   const { isPending, error, data, isFetching } = useQuery({
     queryKey: ['repoData'],
     queryFn: async() => {
-      const response = await fetch(
-        'https://api.github.com/repos/tanstack/query'
-      );
+      const response = await fetch(import.meta.env.VITE_API_URL);
       return await response.json();
     }
   });
