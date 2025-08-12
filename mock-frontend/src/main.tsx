@@ -1,13 +1,14 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import { BrowserRouter, Route, Routes } from 'react-router'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { StrictMode } from 'react';
 
-import App from './App.tsx'
-import About from './pages/About.tsx'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter, Route, Routes } from 'react-router';
 
-const root = document.getElementById("root");
+import App from './App.tsx';
+import About from './pages/About.tsx';
+import './index.css';
+
+const root = document.getElementById('root');
 const queryClient = new QueryClient();
 
 createRoot(root!).render(
@@ -21,4 +22,4 @@ createRoot(root!).render(
       </BrowserRouter>
     </QueryClientProvider>
   </StrictMode>
-)
+);
