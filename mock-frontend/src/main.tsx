@@ -14,7 +14,7 @@ const queryClient = new QueryClient();
 createRoot(root!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter>
+      <BrowserRouter basename='/AGES_III/'>
         <Routes>
           <Route index element={<App />} />
           <Route path="about/:count" element={<About />} />
