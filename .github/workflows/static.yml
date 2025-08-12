@@ -32,7 +32,6 @@ jobs:
           cache-dependency-path: mock-frontend/package-lock.json
 
       - name: Install dependencies
-        working-directory: mock-frontend
         run: |
           cd mock-frontend
           npm ci
