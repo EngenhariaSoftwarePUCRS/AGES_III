@@ -16,6 +16,7 @@ WORKDIR /app
 
 # Install dependencies again for development
 COPY package.json package-lock.json ./
+COPY .husky/ /app/.husky
 RUN npm install --frozen-lockfile
 
 # Copy the full source code
