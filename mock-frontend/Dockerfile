@@ -4,6 +4,7 @@ WORKDIR /app
 
 # Leverage caching by installing dependencies first
 COPY package.json package-lock.json ./
+COPY .husky/ /app/.husky
 RUN npm install --frozen-lockfile
 
 # Copy the rest of the application code and build for production
@@ -30,7 +31,7 @@ CMD ["npm", "run", "dev"]
 FROM nginx:alpine AS production
 
 # Copy the production build artifacts from the build stage
-COPY --from=build /app/build /usr/share/nginx/html
+COPY --from=build /app/dist /usr/share/nginx/html
 
 # Expose the default NGINX port
 EXPOSE 80
