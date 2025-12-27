@@ -3,3 +3,4 @@ frontend*
 infrastructure
 wiki
 .gitlab*
+*firebase*adminsdk*.json
